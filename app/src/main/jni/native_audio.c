@@ -22,7 +22,7 @@
 #define PERIOD_TIME 20 //ms
 #define FRAME_SIZE SAMPLERATE*PERIOD_TIME/1000
 #define BUFFER_SIZE FRAME_SIZE*CHANNELS
-#define TEST_CAPTURE_FILE_PATH "/sdcard/audio.pcm"
+#define TEST_CAPTURE_FILE_PATH "/storage/emulated/0/Android/data/com.jhuster.audiodemo/files/audio.pcm"
 
 static volatile int g_loop_exit = 0;
 

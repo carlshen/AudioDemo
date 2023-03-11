@@ -2,8 +2,8 @@ package com.jhuster.audiodemo.tester;
 
 import android.media.AudioFormat;
 import android.media.MediaRecorder;
-import android.os.Environment;
 
+import com.jhuster.audiodemo.MainApplication;
 import com.jhuster.audiodemo.api.audio.AudioCapturer;
 import com.jhuster.audiodemo.api.wav.WavFileWriter;
 
@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class AudioCaptureTester extends Tester implements AudioCapturer.OnAudioFrameCapturedListener {
 
-    private static final String DEFAULT_TEST_FILE = Environment.getExternalStorageDirectory() + "/test.wav";
+    private static final String DEFAULT_TEST_FILE = MainApplication.getInstance().getExternalFilesDir(null).getAbsolutePath() + "/test.wav";
 
     private AudioCapturer mAudioCapturer;
     private WavFileWriter mWavFileWriter;

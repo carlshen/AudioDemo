@@ -1,7 +1,6 @@
 package com.jhuster.audiodemo.tester;
 
-import android.os.Environment;
-
+import com.jhuster.audiodemo.MainApplication;
 import com.jhuster.audiodemo.api.audio.AudioPlayer;
 import com.jhuster.audiodemo.api.wav.WavFileReader;
 
@@ -9,7 +8,7 @@ import java.io.IOException;
 
 public class AudioPlayerTester extends Tester {
 
-    private static final String DEFAULT_TEST_FILE = Environment.getExternalStorageDirectory() + "/test.wav";
+    private static final String DEFAULT_TEST_FILE = MainApplication.getInstance().getExternalFilesDir(null).getAbsolutePath() + "/test.wav";
 
     private static final int SAMPLES_PER_FRAME = 1024;
 
