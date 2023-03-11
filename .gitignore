@@ -20,6 +20,11 @@ proguard/
 # Ignore gradle files
 .gradle/
 build/
+.externalNativeBuild
+app/.externalNativeBuild/
+app/.cxx/
+app/build
+.cxx/
 
 # Eclipse project files
 .classpath
